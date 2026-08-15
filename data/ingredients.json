@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Eggs",
+        "type": "expired",
+        "quantity": "12",
+        "expires": "Yesterday",
+        "location": "Top Shelf"
+    },
+    {
+        "name": "Milk",
+        "type": "fresh",
+        "quantity": "2L",
+        "expires": "15 Aug 2026",
+        "location": "Door"
+    },
+    {
+        "name": "Apple",
+        "type": "fresh",
+        "quantity": "6",
+        "expires": "20 Aug 2026",
+        "location": "Drawer"
+    },
+    {
+        "name": "Orange",
+        "type": "fresh",
+        "quantity": "5",
+        "expires": "21 Aug 2026",
+        "location": "Drawer"
+    }
+]

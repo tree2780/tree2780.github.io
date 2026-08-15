@@ -1,0 +1,348 @@
+/* --- Base Variables & Color Palette --- */
+:root {
+    --sif-primary: #970000;    /* Main Primary Red */
+    --sif-secondary: #5998D6;  /* Secondary Blue */
+    --sif-grey: #333333;       /* Neutral Grey for text/borders */
+    --sif-black: #111111;      /* Deep black elements */
+    --sif-bg: #ffffff;         /* Pure white background */
+    --sif-card-bg: #ffffff;
+    --sif-border: #e0e0e0;
+}
+
+/* Base Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--sif-bg);
+    color: var(--sif-grey);
+    padding-bottom: 20px;
+}
+
+/* Header - Red Top Bar with White Text/Icons */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--sif-primary); /* Solid red top bar */
+    color: #ffffff;
+}
+
+.menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffffff; /* White menu/back arrow icon */
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: -1px;
+    color: #ffffff; /* White heading ("SIF" / "Profile") */
+}
+
+.profile-pic img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff; /* White border for avatar against red background */
+}
+
+/* Main Content Area */
+.content {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+/* Stats Cards (Horizontal Scroll) */
+.stats-scroll-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    scrollbar-width: none; 
+}
+.stats-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.stat-card {
+    min-width: 200px;
+    border: 1px solid var(--sif-border);
+    border-left: 4px solid var(--sif-primary); /* Red accent border */
+    border-radius: 12px;
+    padding: 15px;
+    background-color: var(--sif-card-bg);
+    flex-shrink: 0;
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--sif-grey);
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--sif-black);
+}
+
+.stat-subtext {
+    font-size: 12px;
+    color: #888;
+}
+
+/* General Card Styles */
+.card {
+    border: 1px solid var(--sif-border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--sif-card-bg);
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    color: var(--sif-black);
+}
+
+/* Graph Section */
+.chart-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+/* Leaderboard Section */
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.leaderboard-item:last-child {
+    margin-bottom: 0;
+}
+
+.rank {
+    font-weight: 800;
+    font-size: 20px;
+    width: 40px;
+    font-style: italic;
+    color: var(--sif-secondary); /* Secondary blue highlight for ranks */
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: var(--sif-black);
+}
+
+.user-email {
+    font-size: 13px;
+    color: #888;
+}
+
+/* --- Floating Dock Styles --- */
+.floating-dock {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    background-color: rgba(17, 17, 17, 0.85); /* Deep #111111 tone */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+    
+    padding: 12px 25px;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    width: 80%;
+    max-width: 320px;
+    z-index: 1000;
+}
+
+.dock-item {
+    color: #888888;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dock-item:hover {
+    color: var(--sif-primary);
+    transform: translateY(-3px);
+}
+
+.dock-item.active {
+    color: #ffffff;
+    background-color: rgba(151, 0, 0, 0.3); /* Tinted with primary red */
+}
+
+/* --- Settings & Profile Page Elements --- */
+.profile-header-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.large-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid var(--sif-primary);
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--sif-black);
+}
+
+.profile-email {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--sif-border);
+}
+
+.settings-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.settings-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--sif-grey);
+}
+
+.settings-info i {
+    color: var(--sif-secondary); /* Secondary blue accent for setting icons */
+    width: 20px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+.btn-outline {
+    border: 1px solid var(--sif-border);
+    background-color: #f9f9f9;
+    color: var(--sif-black);
+}
+
+.btn-outline:hover {
+    border-color: var(--sif-primary);
+    color: var(--sif-primary);
+}
+
+.btn-danger-text {
+    color: var(--sif-primary);
+    text-align: left;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--sif-primary); /* Toggle switch active state uses primary red */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/fridge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuyu&family=Yuyu+Short&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Fridge</title>
+</head>
+<body>
+    <div class="search">
+        <i class="fa-solid fa-magnifying-glass icon"></i>
+        <input type="text" placeholder="Search">
+    </div>
+
+    <div class="filters">
+        <select name="filterdropdown" id="filterdropdown">
+            <option value="filter" selected hidden>Filter</option>
+            <option value="all">All</option>
+            <option value="fresh">Fresh</option>
+            <option value="expired">Expired</option>
+        </select>
+        <select id="sortdropdown">
+            <option value="sort" selected hidden>Sort</option>
+            <option value="default">Default</option>
+            <option value="fresh">Age</option>
+            <option value="expired">Expiry Date</option>
+            <option value="alphabetical">Alphabetical</option>
+        </select>
+        <button id="openModalBtn">Add Ingredient</button>
+    </div>
+
+    <div class="ingredients"></div>
+
+    <dialog id="addIngredientModal">
+        <form id="ingredientForm">
+            <h2>Add New Ingredient</h2>
+            <label>Name: <input type="text" id="newName" required></label>
+            <label>Type: 
+                <select id="newType" required>
+                    <option value="fresh">Fresh</option>
+                    <option value="expired">Expired</option>
+                </select>
+            </label>
+            <label>Quantity: <input type="text" id="newQuantity" required></label>
+            <label>Expires: <input type="text" id="newExpires" required></label>
+            <label>Location: <input type="text" id="newLocation" required></label>
+            
+            <div class="modal-buttons">
+                <button type="submit" id="saveBtn">Save</button>
+                <button type="button" id="closeModalBtn">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+    <nav class="floating-dock">
+        <a href="index.html" class="dock-item">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="fridge.html" class="dock-item">
+            <i class="fa-solid fa-snowflake"></i> 
+        </a>
+        <a href="recipe.html" class="dock-item">
+            <i class="fa-solid fa-utensils"></i>
+        </a>
+        <a href="settings.html" class="dock-item">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </nav>
+
+    <script src="../javascript/fridge.js"></script>
+</body>
+</html>

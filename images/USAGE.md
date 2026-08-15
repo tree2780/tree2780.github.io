@@ -1,0 +1,1 @@
+# Put all images in subfolder with appropriate folder names

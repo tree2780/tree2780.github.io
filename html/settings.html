@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIF Settings</title>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="top-nav">
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+            <i class="fa-solid fa-arrow-left menu-icon"></i>
+        </a>
+        <h1 class="logo" style="font-size: 20px;">Profile</h1>
+        <div style="width: 20px;"></div> 
+    </header>
+
+    <main class="content">
+        <div class="card profile-header-card">
+            <img src="https://ui-avatars.com/api/?name=User&background=333&color=fff" alt="Profile" class="large-avatar">
+            <h2 class="profile-name">SIF User</h2>
+            <p class="profile-email">sif.enjoyer@sifIsSoCool.com</p>
+            <button class="btn btn-outline">Edit Profile</button>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">App Preferences</h3>
+            
+            <div class="settings-row">
+                <div class="settings-info">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Dark Mode</span>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="settings-row">
+                <div class="settings-info">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Notifications</span>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Account</h3>
+            <button class="btn btn-danger-text">
+                <i class="fa-solid fa-right-from-bracket"></i> Log Out
+            </button>
+        </div>
+    </main>
+
+    <script src="../javascript/index.js"></script>
+
+    <nav class="floating-dock">
+        <a href="index.html" class="dock-item">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="fridge.html" class="dock-item">
+            <i class="fa-solid fa-snowflake"></i> 
+        </a>
+        <a href="recipe.html" class="dock-item">
+            <i class="fa-solid fa-utensils"></i>
+        </a>
+        <a href="settings.html" class="dock-item active">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </nav>
+</body>
+</html>

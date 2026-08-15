@@ -1,0 +1,180 @@
+/* --- Base Variables & Color Palette --- */
+:root {
+    --sif-primary: #970000;    /* Primary Red */
+    --sif-secondary: #5998D6;  /* Secondary Blue */
+    --sif-grey: #333333;       /* Neutral Grey */
+    --sif-black: #111111;      /* Deep black elements */
+    --sif-bg: #ffffff;         /* Pure white background */
+    --sif-card-bg: #ffffff;
+    --sif-border: #e0e0e0;
+}
+
+/* Base Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yuyu", sans-serif;
+}
+
+.yuyu-short-regular {
+    font-family: "Yuyu Short", sans-serif;
+}
+
+body {
+    background-color: var(--sif-bg);
+    color: var(--sif-grey);
+    padding: 20px;
+    padding-bottom: 100px; 
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--sif-card-bg);
+    border: 1px solid var(--sif-border);
+    border-radius: 12px;
+}
+
+.search .icon {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: var(--sif-secondary);
+}
+
+.search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--sif-black);
+}
+
+.search input::placeholder {
+    color: #888;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    overflow-x: auto;
+    scrollbar-width: none; 
+}
+
+.filters::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-btn {
+    flex: 1;
+    min-width: 90px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid var(--sif-border);
+    background: var(--sif-card-bg);
+    color: var(--sif-grey);
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background: #f8f9fa;
+    border-color: var(--sif-secondary);
+}
+
+.filter-btn.active {
+    background: var(--sif-primary); /* Matching primary red theme */
+    border-color: var(--sif-primary);
+    color: white;
+}
+
+/* Recipe Cards */
+.recipes {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recipe {
+    padding: 20px;
+    border: 1px solid var(--sif-border);
+    border-top: 4px solid var(--sif-primary); /* Red accent border */
+    border-radius: 16px;
+    background: var(--sif-card-bg);
+}
+
+.recipe h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--sif-black);
+}
+
+.recipe-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.recipe p {
+    color: var(--sif-grey);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* --- Floating Dock Styles --- */
+.floating-dock {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    background-color: rgba(17, 17, 17, 0.85); /* Deep #111111 */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+    
+    padding: 12px 25px;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    width: 80%;
+    max-width: 320px;
+    z-index: 1000;
+}
+
+.dock-item {
+    color: #888888;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dock-item:hover {
+    color: var(--sif-primary);
+    transform: translateY(-3px);
+}
+
+.dock-item.active {
+    color: #ffffff;
+    background-color: rgba(151, 0, 0, 0.3);
+}

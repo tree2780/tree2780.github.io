@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/recipe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuyu&family=Yuyu+Short&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>SIF - Recipes</title>
+</head>
+
+<body>
+
+    <div class="search">
+        <i class="fa-solid fa-magnifying-glass icon"></i>
+        <input type="text" id="recipeSearch" placeholder="Search recipes...">
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn" data-filter="favorites">Favorites</button>
+        <button class="filter-btn" data-filter="popular">Popular</button>
+        <button class="filter-btn" data-filter="history">History</button>
+    </div>
+
+    <div class="recipes">
+
+        <div class="recipe" data-type="favorites">
+            <h2>Homemade Duck Nutella</h2>
+            <img class="recipe-img" src="../images/recipes/homemadeDuckNutella.png" alt="Homemade Duck Nutella">
+            <p>This recipe is a favorite.</p>
+        </div>
+
+        <div class="recipe" data-type="popular">
+            <h2>Roast Seafood</h2>
+            <img class="recipe-img" src="../images/recipes/roast-seafood.jpg" alt="Roast Seafood">
+            <p>This recipe is popular.</p>
+        </div>
+
+        <div class="recipe" data-type="history">
+            <h2>Pressure Cooker Hard-boiled Eggs</h2>
+            <img class="recipe-img" src="../images/recipes/pressure-cooked-eggs.jpg" alt="Pressure Cooker Hard-boiled Eggs">
+            <p>This recipe is in your history.</p>
+        </div>
+
+    </div>
+    
+    <nav class="floating-dock">
+        <a href="index.html" class="dock-item">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="fridge.html" class="dock-item">
+            <i class="fa-solid fa-snowflake"></i> 
+        </a>
+        <a href="recipe.html" class="dock-item">
+            <i class="fa-solid fa-utensils"></i>
+        </a>
+        <a href="settings.html" class="dock-item">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </nav>
+
+    <script src="../javascript/recipe.js"></script>
+
+</body>
+</html>
