@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    
-    // ==========================================
-    // 1. Chart.js Graph Initialization
-    // ==========================================
+
     const canvas = document.getElementById('growthChart');
     
     if (canvas) {
@@ -82,9 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // ==========================================
-    // 2. Floating Dock Active State Logic
-    // ==========================================
     const currentPath = window.location.pathname.split("/").pop();
     const dockItems = document.querySelectorAll(".dock-item");
 

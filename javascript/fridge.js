@@ -142,9 +142,6 @@ ingredientForm.addEventListener("submit", (e) => {
 // Initial load
 loadIngredients();
 
-// ==========================================
-// Floating Dock Active State Logic
-// ==========================================
 document.addEventListener("DOMContentLoaded", function() {
     // Get the current filename (e.g., 'fridge.html')
     const currentPath = window.location.pathname.split("/").pop();
