@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <h3 style="margin-bottom: 10px; color: var(--sif-black); font-size: 1.1rem;">${fullMeal.strMeal}</h3>
                             <img src="${fullMeal.strMealThumb}" alt="${fullMeal.strMeal}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; object-fit: cover; border: 1px solid var(--sif-border);">
                             <p style="font-size: 0.95rem; color: var(--sif-grey); margin-bottom: 15px;">
-                                Perfect! This recipe uses your fresh <strong>${searchIngredient}</strong>.
+                                This recipe uses your <strong>${searchIngredient}</strong>.
                             </p>
                             <a href="${recipeLink}" target="_blank" style="display: block; text-align: center; background-color: var(--sif-primary); color: white; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: opacity 0.2s ease;">
                                 View Full Recipe
